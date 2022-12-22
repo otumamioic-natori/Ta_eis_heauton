@@ -1,0 +1,580 @@
+@charset "UTF-8";
+@import url("html5reset-1.6.1.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+/*--------------------テンプレート情報--------------------*/
+/*template　Maison de R*/
+/*url　https://maisonder.web.fc2.com/*/
+/*title　BEATRICE*/
+/*code　CSS3*/
+
+/*--------------------ライセンス--------------------*/
+
+/*HTML5 Reset Stylesheet
+html5doctor.com Reset Stylesheet v1.6.1
+License : CC0 Public Domain Dedication, MIT License
+Author : Richard Clark
+http://html5doctor.com/html-5-reset-stylesheet/
+https://creativecommons.org/publicdomain/zero/1.0/
+https://opensource.org/licenses/MIT
+*/
+
+/*
+jQuery v3.6.1
+License : MIT License
+https://jquery.com/
+https://jquery.org/license/
+https://www.tldrlegal.com/l/mit
+*/
+
+/*
+Smooth scroll
+TechAcademyマガジン
+https://techacademy.jp/magazine/9532
+*/
+
+/*
+Google Fonts
+"Lora"
+Designer : Cyreal
+License : SIL Open Font License
+https://fonts.google.com/
+https://scripts.sil.org/OFL
+"Nunito"
+Designer : Vernon Adams
+License : SIL Open Font License
+https://fonts.google.com/
+https://scripts.sil.org/OFL
+"Pinyon Script"
+Designer : Nicole Fally
+License : SIL Open Font License
+https://fonts.google.com/
+https://scripts.sil.org/OFL
+*/
+
+/*
+Font Awesome(Font)
+License : SIL Open Font License 1.1
+https://fontawesome.com/v4.7.0/
+http://scripts.sil.org/OFL
+Font Awesome(Code)
+License : MIT license
+https://fontawesome.com/v4.7.0/
+http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------モバイルファースト------------*/
+
+/*基本*/
+
+* {
+    /*paddingとborderを幅と高さに含める*/
+    box-sizing: border-box;
+    /*単語の途中でも必ず改行される*/
+    word-break: break-all;
+    /*フォーム周辺のデザインをリセット*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+html {}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /*モバイル端末でのテキストサイズの自動調整対策*/
+    font-family: 'Nunito', "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS P Gothic", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #8a7653;
+    letter-spacing: 0.04em;
+    text-align: left;
+    background: url(bg01.png) repeat #e0c7a4;
+}
+
+a {
+    color: #8a7653;
+    transition: 0.2s;
+    /*アニメーション*/
+}
+
+a:hover {
+    color: #d6b990;
+}
+
+img {
+    max-width: 100%;
+    /*フルードイメージ（親要素の幅に応じて縦横比を保持したまま自動的に画像の拡大縮小をする）*/
+    height: auto;
+    vertical-align: bottom;
+    /*ディセンダー対策（画像の下の隙間を無くす）*/
+}
+
+a img {
+    /*画像リンクの枠線を消す*/
+    border: 0;
+}
+
+strong {
+    font-weight: normal;
+    padding: 0 5px;
+    background: #fffeed;
+    border-radius: 2px;
+}
+
+.new::after {
+    /*newマーク*/
+    content: "new";
+    margin-left: 0.5em;
+    background: #bc9c70;
+    color: white;
+    padding: 0 5px;
+}
+
+p{
+    color: #806d4d;
+    padding: 2% 0%;
+    word-break: normal;
+}
+
+.sumanai{
+    display: flex;
+    text-align: center;
+    justify-content: center 
+}
+
+ul {
+    list-style-type: none;
+    /*リストマークを非表示*/
+    list-style-position: inside;
+    /*リストマークを内側に表示*/
+}
+
+.ul1 {
+    /*ulリスト用1（縦リスト/テキスト用）*/
+
+}
+
+.ul1 li {
+    margin-top: 0.25em;
+}
+
+.ul1 li:first-child {
+    margin-top: 0;
+}
+
+.ul1 span {
+    margin-right: 1em;
+}
+
+.ul2 {
+    /*ulリスト用2（横リスト/テキスト用） ul1・dl1の入れ子用*/
+    display: inline;
+}
+
+.ul2 li {
+    display: inline;
+    margin-right: 0.5em;
+}
+
+.ul2 li:last-child {
+    margin-right: 0;
+}
+
+.dl1 {
+    /*dlリスト用1（テキスト用/dtとddで一組）*/
+}
+
+.dl1 dt {
+    margin-top: 0.25em;
+}
+
+.dl1 dt:first-child {
+    margin-top: 0;
+}
+
+.ul1 span,
+.dl1 dt span {
+    /*span共通 マーカー風ライン*/
+    background: linear-gradient(transparent 40%, #fff8ee 0%);
+}
+
+/*フォント*/
+
+.title h1,
+nav h1,
+section h1,h2 {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+}
+
+.sub {
+    font-family: 'Pinyon Script', cursive;
+}
+
+/*テキスト 行の高さ*/
+
+.title h1,
+.sub,
+nav h1,
+nav ul li,
+.pagetop {
+    line-height: 1;
+}
+
+.text,
+footer {
+    line-height: 1.7;
+}
+
+.new::after {
+    line-height: 1;
+}
+
+/*テキスト 文字間隔*/
+
+.title h1 {
+    letter-spacing: 0.14em;
+}
+
+.sub {
+    letter-spacing: 0;
+}
+
+section h1,
+nav h1 {
+    letter-spacing: 0.14em;
+}
+
+nav ul li {
+    letter-spacing: 0.08em;
+}
+
+.pagetop {
+    letter-spacing: 0;
+}
+
+/*ページの枠組み*/
+
+#all {}
+
+.wrap1 {
+    width: 100%;
+    padding: 50px 0 50px;
+}
+
+.wrap2 {
+    width: 100%;
+}
+
+.wrap3 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*ヘッダー*/
+
+header {
+    text-align: center;
+    width: 100%;
+    background: #29294e;
+    padding: 8px 0px;
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: white;
+    display: block;
+}
+
+header::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: white;
+    display: block;
+}
+
+.hbox {
+    width: 100%;
+    padding: 30px 20px;
+}
+
+.title {
+    margin: 0 auto;
+}
+
+.title a {
+    /*タイトル部分をまとめてリンク指定*/
+    display: inline-block;
+    /*リンク範囲の拡張*/
+    color: #d6b990;
+    text-decoration: none;
+    transform: scale(1);
+}
+
+.title a:hover {
+    color: #d6b990;
+    transform: scale(1.1);
+}
+
+.title h1 {
+    font-size: 30px;
+}
+
+.sub {
+    display: block;
+    font-size: 20px;
+    margin-top: 18px;
+}
+
+/*ナビ*/
+
+nav {
+    margin: 20px auto 0;
+}
+
+nav ul {
+    font-size: 0;
+    /*隙間対策*/
+    margin-top: 0.25em;
+}
+
+nav ul li {
+    font-size: 12px;
+    /*隙間対策 再指定*/
+    display: inline-block;
+    /*横並び*/
+    margin: 0.5em 0.25em 0 0.25em;
+}
+
+nav ul li a {
+    display: block;
+    /*リンク範囲の拡張*/
+    text-decoration: none;
+    padding: 0 1em;
+    line-height: 24px;
+    background: #bc9c70;
+    color: white;
+    border-radius: 2px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background: #d6b990;
+}
+
+/*ナビ 水平線デザインの見出し*/
+
+nav h1 {
+    color: #d6b990;
+    font-size: 13px;
+    margin-bottom: 1.5em;
+    display: flex;
+    /*フレックスボックス*/
+    align-items: center;
+    /*縦位置 中央*/
+}
+
+nav h1::before,
+nav h1::after {
+    box-sizing: border-box;
+    content: "";
+    border-top: 3px double white;
+    flex-grow: 1;
+    /*残りの領域を埋める*/
+}
+
+nav h1::before {
+    margin-right: 1em;
+}
+
+nav h1::after {
+    margin-left: 1em;
+}
+
+/*メイン*/
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    padding: 20px;
+}
+
+section h1 {
+    text-align: center;
+    font-size: larger;
+    margin: 20px 0px;
+}
+
+/*ページ内リンク対応レイアウト*/
+.layout {
+    padding-top: 50px;
+}
+
+/*セクション リボン*/
+
+.ribbon {
+    display: block;
+    position: relative;
+    height: 30px;
+    /*リボンの高さ*/
+    line-height: 30px;
+    /*リボンの高さ*/
+    vertical-align: middle;
+    padding: 0 30px;
+    /*横の大きさ*/
+    background: #bc9c70;
+    /*塗りつぶし色*/
+    color: white;
+    /*文字色*/
+    box-sizing: border-box;
+}
+
+.ribbon:before,
+.ribbon:after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 0px;
+    z-index: 1;
+}
+
+.ribbon:before {
+    top: 0;
+    left: 0;
+    border-width: 15px 0px 15px 15px;
+    /*1番目と3番目の数値は.ribbonのheightの半分の数値を指定する*/
+    border-color: transparent transparent transparent white;
+    /*4番目の色はsectionの色と揃える*/
+    border-style: solid;
+}
+
+.ribbon:after {
+    top: 0;
+    right: 0;
+    border-width: 15px 15px 15px 0px;
+    /*1番目と3番目の数値は.ribbonのheightの半分の数値を指定する*/
+    border-color: transparent white transparent transparent;
+    /*2番目の色はsectionの色と揃える*/
+    border-style: solid;
+}
+
+/*本文エリア*/
+
+.text {
+    font-family: "M PLUS 1p";
+    font-size: initial;
+    border-top: solid 1px transparent;
+    /*マージンの相殺対策*/
+}
+
+.text>p,
+.text>ul,
+.text>dl {
+    /*本文エリア タグ間の余白*/
+    margin-top: 1em;
+}
+
+.text>p:first-child,
+.text>ul:first-child,
+.text>dl:first-child {
+    /*本文エリア タグ間の余白 先頭の要素を無効*/
+    margin-top: 0;
+}
+
+/*ページトップボタン*/
+.pagetop {
+    /*位置固定*/
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    /*リボンと重ならないための対策*/
+    z-index: 2;
+}
+
+.pagetop a {
+    text-decoration: none;
+    /*リンク範囲の拡張*/
+    display: block;
+    color: white;
+    background: #bc9c70;
+    text-align: center;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    /*heightの値と揃える*/
+    line-height: 40px;
+    /*widthとheightの値の半分にすると円になる*/
+    border-radius: 20px;
+}
+
+.pagetop a:hover {
+    color: white;
+    background: #d6b990;
+}
+
+/*フッター*/
+footer {
+    text-align: center;
+    padding: 20px 20px;
+    background: white;
+    margin: 50px auto 0;
+}
+
+footer ul {
+    font-size: 0;
+    /*隙間対策*/
+}
+
+footer ul li {
+    font-size: 12px;
+    /*隙間対策 再指定*/
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+footer ul li span {
+    margin-right: 0.5em;
+}
+
+/*------------画面サイズ768px以上用（大きい画面サイズ向け）------------*/
+
+@media screen and (min-width:768px) {
+
+    .wrap3 {
+        padding: 0 50px;
+    }
+
+    .hbox {
+        padding: 30px 50px;
+    }
+    
+    .title,
+    nav,
+    main,
+    footer {
+        max-width: 800px;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    section h1 {
+        margin-bottom: 30px;
+    }
+
+}
+
+/*ベンダープレフィックス記述済*/
+/*エラーチェック済*/
